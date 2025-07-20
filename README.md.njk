@@ -1,4 +1,18 @@
-# sv
+# {{ project_name }}
+
+{{ description }}
+
+{% if include_pwa %}A SvelteKit project with Progressive Web App capabilities.{% else %}A SvelteKit project with TypeScript and modern tooling.{% endif %}
+
+## Configuration
+
+- **UI Library**: {{ ui_library|title }}
+- **Adapter**: {{ adapter_choice|title }}{% if include_pwa %}
+- **PWA**: Enabled{% endif %}
+- **Max Requests**: {{ max_requests }}/minute
+
+## Features{% for integration in integrations %}
+- ✅ **{{ integration|replace("_", " ")|title }}** integration{% endfor %}
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
