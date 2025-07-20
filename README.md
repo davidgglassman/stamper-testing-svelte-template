@@ -1,0 +1,2 @@
+# stamper-testing-svelte-template
+
